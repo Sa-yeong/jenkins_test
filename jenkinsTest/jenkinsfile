@@ -52,7 +52,6 @@ pipeline{
 						 --config=junit.platform.reporting.open.xml.enabled=true \
 						 > ${REPORT_DIR}/test-output.txt						 
 				'''
-				junit 'reports/**/*.xml'
 			}
 		}
 	}
