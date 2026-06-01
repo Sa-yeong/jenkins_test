@@ -70,7 +70,10 @@ pipeline{
 				echo "Build and test succeeded"
 				emailext to: 'baeseoyoung8354@gmail.com',
 						subject: 'jenkins build 성공 메일',
-						body: 'jenkins build와 test 성공',
+						body: '''jenkins build와 test 성공
+						-----------------------------------------
+						[테스트 결과 상세 내역]
+						${FILE, path="test-output.txt"}''',
 						attachmentsPattern: '**/test*.txt'
 			}
 		}
