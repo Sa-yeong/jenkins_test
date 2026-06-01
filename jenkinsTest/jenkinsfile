@@ -55,7 +55,8 @@ pipeline{
 				junit 'reports/**/*.xml'
 			}
 		}
-		post {
+	}
+	post {
 			always {
 				echo "[*] Archiving test result..."
 				junit "${REPORT_DIR}/**/*.xml"
@@ -70,5 +71,4 @@ pipeline{
 				echo "Build and test succeeded"
 			}
 		}
-	}
 }
