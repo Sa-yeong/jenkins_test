@@ -59,7 +59,7 @@ pipeline{
 	post {
 			always {
 				echo "[*] Archiving test result..."
-				junit "${REPORT_DIR}/**/*.xml"
+				junit "**/${REPORT_DIR}/*.xml"
 				archiveArtifacts artifacts: "${REPORT_DIR}/**/*", allowEmptyArchive: true
 			}
 			
