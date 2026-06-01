@@ -68,9 +68,6 @@ pipeline{
 			
 			success {
 				echo "Build and test succeeded"
-				mail to: 'baeseoyoung8354@gmail.com',
-					 subject: "✅ Jenkins build succeeded: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
-					 body: '테스트가 성공적으로 완료됨. \n 결과 txt 파일 확인 바람. \n 확인 링크 : ${env.BUILD_URL}'
 			}
 		}
 }
