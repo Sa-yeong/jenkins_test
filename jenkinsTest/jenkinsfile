@@ -68,9 +68,10 @@ pipeline{
 			
 			success {
 				echo "Build and test succeeded"
-				mail to: 'baeseoyoung8354@gmail.com',
-					subject: 'jenkins build 성공 메일',
-					body: 'jenkins build와 test 성공'
+				emailext to: 'baeseoyoung8354@gmail.com',
+						subject: 'jenkins build 성공 메일',
+						body: 'jenkins build와 test 성공',
+						attachmentsPattern: '**/test*.txt'
 			}
 		}
 }
