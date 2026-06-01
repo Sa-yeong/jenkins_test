@@ -55,6 +55,7 @@ pipeline{
 				junit 'reports/**/*.xml'
 			}
 		}
+		
 		post {
 			always {
 				echo "[*] Archiving test result..."
