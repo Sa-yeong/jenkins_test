@@ -4,4 +4,4 @@ public class Main {
         System.out.println("add Something");
     }
 
-}git pull origin maingit pull origin main
+}
